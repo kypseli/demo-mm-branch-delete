@@ -1,4 +1,3 @@
-library 'cb-days@master'
 pipeline {
   agent { label'default-jnlp'}
   options { 
