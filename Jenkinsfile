@@ -18,8 +18,8 @@ pipeline {
       }
       steps {
           script {
-              def eventTriggerCause = currentBuild.getBuildCauses()[0]
-              echo $eventTriggerCause
+            sh "curl -u $JENKINS_CLI_USR:$JENKINS_CLI_PSW --silent ${BUILD_URL}api/json -o build.json"
+            sh "cat build.json"  
           }
       }
     }
